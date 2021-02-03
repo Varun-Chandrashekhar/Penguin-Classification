@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle5
+import pickle
 import sklearn
 from sklearn.ensemble import RandomForestClassifier
 
@@ -66,7 +66,7 @@ else:
     st.write(df)
 
 # Reads in saved classification model
-load_clf = pickle5.load(open('penguins_clf.pkl', 'rb'))
+load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
 
 # Apply model to make predictions
 prediction = load_clf.predict(df)
